@@ -5,6 +5,7 @@ class Person < Nameable
   attr_reader :id
 
   attr_accessor :name, :age
+
   # Jai mis name = '' au lieu de name: ''
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
@@ -29,8 +30,8 @@ class Person < Nameable
 end
 
 person = Person.new(22, 'max')
-  p person.correct_name
-  capitalizedPerson = CapitalizeDecorator.new(person)
-  p capitalizedPerson.correct_name
-  capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)
-  p capitalizedTrimmedPerson.correct_name
+p person.correct_name
+capitalizedperson = CapitalizeDecorator.new(person)
+p capitalizedperson.correct_name
+capitalizedtrimmedperson = TrimmerDecorator.new(capitalizedPerson)
+p capitalizedtrimmedperson.correct_name
