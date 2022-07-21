@@ -14,3 +14,4 @@ class CapitalizeDecorator < Decorator
   end
 end
 
+
