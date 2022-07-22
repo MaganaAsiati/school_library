@@ -36,4 +36,3 @@ capitalizedperson = CapitalizeDecorator.new(person)
 p capitalizedperson.correct_name
 capitalizedtrimmedperson = TrimmerDecorator.new(capitalizedPerson)
 p capitalizedtrimmedperson.correct_name
-
