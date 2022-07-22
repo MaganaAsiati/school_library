@@ -35,3 +35,10 @@ capitalizedperson = CapitalizeDecorator.new(person)
 p capitalizedperson.correct_name
 capitalizedtrimmedperson = TrimmerDecorator.new(capitalizedPerson)
 p capitalizedtrimmedperson.correct_name
+
+# or 
+# class TrimmerDecorator < Decorator
+#   def correct_name
+#     @nameable.correct_name[0..10]
+#   end
+# end
