@@ -2,7 +2,7 @@ require './nameable'
 require_relative './decorator'
 
 class Person < Nameable
-  attr_reader :id, :rentals
+  attr_reader :id, 
 
   attr_accessor :name, :age
 
@@ -13,7 +13,7 @@ class Person < Nameable
     @name = name
     @age = age
     @parent_permission = parent_permission
-    @rentals = []
+    
   end
 
   def of_age?
@@ -37,9 +37,3 @@ p capitalizedperson.correct_name
 capitalizedtrimmedperson = TrimmerDecorator.new(capitalizedPerson)
 p capitalizedtrimmedperson.correct_name
 
-# or 
-# class TrimmerDecorator < Decorator
-#   def correct_name
-#     @nameable.correct_name[0..10]
-#   end
-# end
