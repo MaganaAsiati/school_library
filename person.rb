@@ -2,7 +2,7 @@ require './nameable'
 require_relative './decorator'
 
 class Person < Nameable
-  attr_reader :id, 
+  attr_reader :id
 
   attr_accessor :name, :age
 
@@ -13,7 +13,6 @@ class Person < Nameable
     @name = name
     @age = age
     @parent_permission = parent_permission
-    
   end
 
   def of_age?
