@@ -19,4 +19,10 @@ class App
     end
   end
 
- 
+  def all_person
+    @people&.each do |person|
+      puts "[#{person.class}] - Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+    end
+  end
+
+  
