@@ -39,4 +39,8 @@ class App
     @books << Book.new(title: title, author: author)
   end
 
+  def create_student(age:, name:, parent_permission: true, classroom: nil)
+    @people << Student.new(age: age, name: name, parent_permission: parent_permission, classroom: classroom)
+  end
+
   
