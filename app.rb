@@ -43,4 +43,14 @@ class App
     @people << Student.new(age: age, name: name, parent_permission: parent_permission, classroom: classroom)
   end
 
-  
+  def create_teacher(specialization:, age:, name:, parent_permission: true)
+    @people << Teacher.new(specialization: specialization, age: age, name: name, parent_permission: parent_permission)
+  end
+
+  def create_rental(book:, person:, date:)
+    @rentals << Rental.new(book: book, person: person, date: date)
+  end
+end
+
+
+
