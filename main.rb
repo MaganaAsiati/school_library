@@ -77,3 +77,60 @@ def list_options(app, input)
   end
 end
 
+def check_input_create_people(app)
+  puts 'Do you want to create a student (1) or a teacher? (2) [Input 1 or 2]'
+  input = gets.chomp.to_i
+  case input
+  when 1
+    create_student(app)
+  when 2
+    create_teacher(app)
+  else
+    puts 'Invalid input!'
+  end
+end
+
+def create_options(app, input)
+  case input
+  when 3
+    check_input_create_people(app)
+  when 4
+    create_book(app)
+  when 5
+    create_rental(app)
+  end
+end
+
+def check_input(app, input)
+  case input
+  when 1..2
+    list_options(app, input)
+  when 3..5
+    create_options(app, input)
+  when 6
+    person_info(app)
+  when 7
+    puts 'Goodbye!'
+    raise StopIteration
+  else
+    puts "You input #{input}"
+  end
+end
+
+def main
+  app = App.new
+  loop do
+    puts 'Please choose an option by entering a number'
+    puts '1 - List all books'
+    puts '2 - List all people'
+    puts '3 - Create a person'
+    puts '4 - Create a book'
+    puts '5 - Create a rental'
+    puts '6 - List all rentals for a given person id'
+    puts '7 - Exit'
+    input = gets.chomp.to_i
+    check_input(app, input)
+  end
+end
+
+main
