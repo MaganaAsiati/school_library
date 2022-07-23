@@ -25,4 +25,14 @@ class App
     end
   end
 
+  def all_rentals(id)
+    @people.each do |person|
+      next unless person.id == id
+
+      person.rentals.each do |rental|
+        puts "[#{rental.class}] - Book: #{rental.book.title}, Person: #{rental.person.name}, Date: #{rental.date}"
+      end
+    end
+  end
+
   
