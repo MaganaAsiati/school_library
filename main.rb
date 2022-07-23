@@ -12,3 +12,15 @@ def create_student(app)
   puts 'Student created!'
 end
 
+def create_teacher(app)
+  puts 'Let\'s create a teacher!'
+  puts 'What is your name?'
+  name = gets.chomp
+  puts 'What is your age?'
+  age = gets.chomp.to_i
+  puts 'What is your specialization?'
+  specialization = gets.chomp
+  app.create_teacher(specialization: specialization, age: age, name: name, parent_permission: true)
+  puts 'Teacher created!'
+end
+
