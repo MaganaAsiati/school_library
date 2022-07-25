@@ -2,7 +2,6 @@
 require './app'
 require './input'
 
-
 def main
   app = App.new
   loop do
