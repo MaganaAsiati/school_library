@@ -52,6 +52,13 @@ Kindly modify the files as needed.
 - Twitter: [@asia_magana](https://twitter.com/asia_magana)
 - LinkedIn: [Asia Magana](https://www.linkedin.com/in/asia-magana-60b451200/)
 
+👤 **Abol Ger**
+
+- GitHub: [@ger619](https://github.com/ger619)
+- Twitter: [@ger_abol](https://twitter.com/ger_abol)
+- LinkedIn: [David Ger](https://www.linkedin.com/in/abolger/)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
