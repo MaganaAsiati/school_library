@@ -44,5 +44,5 @@ class Storage
     rental_file.write(JSON.generate(app.rentals))
     rental_file.close
   end
-
+end 
   
