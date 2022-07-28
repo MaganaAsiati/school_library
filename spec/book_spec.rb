@@ -17,4 +17,10 @@ describe Book do
     end
   end
 
-  
+  describe '#author' do
+    it 'returns the correct author' do
+      @book.author.should == 'Ced'
+    end
+  end
+end
+
