@@ -29,4 +29,12 @@ class Storage
     book_file.close
   end
 
+  def save_person(app)
+    return unless File.file?('people.json')
+
+    people_file = File.open('people.json', 'w')
+    people_file.write(JSON.generate(app.people))
+    people_file.close
+  end
+
   
