@@ -11,4 +11,12 @@ class Classroom
     @students << student unless @students.include?(student)
     student.classroom = self
   end
+  def to_json(*_args)
+    JSON.dump({
+                label: @label,
+                students: @students,
+                parent_permission: @parent_permission,
+                classroom: @classroom
+              })
+  end
 end
