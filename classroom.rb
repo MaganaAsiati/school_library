@@ -11,6 +11,7 @@ class Classroom
     @students << student unless @students.include?(student)
     student.classroom = self
   end
+
   def to_json(*_args)
     JSON.dump({
                 label: @label,

@@ -7,7 +7,7 @@ class Person < Nameable
   attr_accessor :name, :age
 
   # Jai mis name = '' au lieu de name: ''
-  def initialize(age:,id: nil,  name: 'Unknown', parent_permission: true)
+  def initialize(age:, id: nil, name: 'Unknown', parent_permission: true)
     super()
     @id = id.nil? ? Random.rand(1..1000) : id
     @name = name
@@ -15,6 +15,7 @@ class Person < Nameable
     @parent_permission = parent_permission
     @rentals = []
   end
+
   def to_json(_args)
     JSON.dump({
                 id: @id,

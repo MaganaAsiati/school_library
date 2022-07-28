@@ -16,6 +16,7 @@ class Student < Person
   def play_hooky
     "¯\(ツ)/¯"
   end
+
   def to_json(*_args)
     JSON.dump({
                 id: @id,
@@ -24,5 +25,5 @@ class Student < Person
                 parent_permission: @parent_permission,
                 classroom: @classroom
               })
-end
+  end
 end
