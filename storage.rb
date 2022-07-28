@@ -37,4 +37,12 @@ class Storage
     people_file.close
   end
 
+  def save_rental(app)
+    return unless File.file?('rentals.json')
+
+    rental_file = File.open('rentals.json', 'w')
+    rental_file.write(JSON.generate(app.rentals))
+    rental_file.close
+  end
+
   
