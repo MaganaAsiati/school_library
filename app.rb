@@ -39,15 +39,19 @@ class App
     @books << Book.new(title: title, author: author)
   end
 
-  def create_student(age:, name:, parent_permission: true, classroom: nil)
-    @people << Student.new(age: age, name: name, parent_permission: parent_permission, classroom: classroom)
+  def create_student(id:, age:, name:, parent_permission: true, classroom: nil)
+    @people << Student.new(id: id, age: age, name: name, parent_permission: parent_permission, classroom: classroom)
   end
 
-  def create_teacher(specialization:, age:, name:, parent_permission: true)
-    @people << Teacher.new(specialization: specialization, age: age, name: name, parent_permission: parent_permission)
+  def create_teacher(id:, specialization:, age:, name:, parent_permission: true)
+    @people << Teacher.new(id: id, specialization: specialization, age: age, name: name,
+                           parent_permission: parent_permission)
   end
 
   def create_rental(book:, person:, date:)
     @rentals << Rental.new(book: book, person: person, date: date)
+  end
+  def books_to_json
+    @books.each { |book| puts JSON.generate(book) }
   end
 end
