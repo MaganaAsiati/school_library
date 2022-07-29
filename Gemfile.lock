@@ -41,7 +41,7 @@ PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
-  rspec (>= 2.0, < 3.12)
+  rspec (>= 2.0, < 3.11)
   rubocop (>= 1.0, < 2.0)
 
 BUNDLED WITH
