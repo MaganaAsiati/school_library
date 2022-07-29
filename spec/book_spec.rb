@@ -22,4 +22,12 @@ describe Book do
       @book.author.should == 'Ced'
     end
   end
+  describe '#add_rental' do
+    it 'should add a rental' do
+      rental = Rental.new(date: "12/12/2002", person: Person.new(id: 1, age: 14, name: 'Ced', parent_permission: true),
+                          book: Book.new(title: 'Love', author: 'Ced'))
+      @book.add_rental(rental)
+      @book.rentals.should == [rental]
+    end
+  end
 end

@@ -33,4 +33,9 @@ describe Student do
       expect(Classroom.instance_methods(false).include?(:add_student)).to eq true
     end
   end
+  context '#play hooky' do
+    it 'should return the correct string' do
+      expect(@student.play_hooky).to eq "¯\(ツ)/¯"
+    end
+  end
 end
