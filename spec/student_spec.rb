@@ -29,8 +29,8 @@ describe Student do
     end
   end
   context '#add_student method' do
-  it 'should check the availability of Classroom class method/s' do
-    expect(Classroom.instance_methods(false).include?(:add_student)).to eq true
+    it 'should check the availability of Classroom class method/s' do
+      expect(Classroom.instance_methods(false).include?(:add_student)).to eq true
+    end
   end
-end
 end

@@ -45,7 +45,6 @@ class Storage
     rental_file.close
   end
 
-
   def load_data(app)
     load_books(app)
     load_person(app)
@@ -98,4 +97,4 @@ class Storage
     # puts app.rentals
     person_file.close
   end
-
+end
