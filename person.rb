@@ -4,7 +4,7 @@ require_relative './decorator'
 class Person < Nameable
   attr_reader :id, :rentals
 
-  attr_accessor :name, :age
+  attr_accessor :name, :age, :parent_permission
 
   # Jai mis name = '' au lieu de name: ''
   def initialize(age:, id: nil, name: 'Unknown', parent_permission: true)
@@ -30,7 +30,7 @@ class Person < Nameable
     @age >= 18
   end
 
-  def can_use_service?
+  def can_use_services?
     of_age? || @parent_permission
   end
 

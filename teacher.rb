@@ -1,7 +1,7 @@
 require_relative './person'
 
 class Teacher < Person
-  attr_reader :specialization, :age, :name, :parent_permission, :id
+  attr_accessor :specialization, :age, :name, :parent_permission, :id
 
   def initialize(specialization:, age:, name:, id: nil, parent_permission: true)
     @id = id.nil? ? Random.rand(1..1000) : id
