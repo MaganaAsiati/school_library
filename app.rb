@@ -51,6 +51,7 @@ class App
   def create_rental(book:, person:, date:)
     @rentals << Rental.new(book: book, person: person, date: date)
   end
+
   def books_to_json
     @books.each { |book| puts JSON.generate(book) }
   end
