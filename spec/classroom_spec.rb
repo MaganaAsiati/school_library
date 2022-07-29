@@ -18,10 +18,10 @@ describe 'Unit tests for class Classroom' do
   end
 
   context '#label' do
-  it 'should return the label of the Classroom object ' do
-    expect(@classroom.label).to eql @label
+    it 'should return the label of the Classroom object ' do
+      expect(@classroom.label).to eql @label
+    end
   end
-end
 
   context '#add_student method' do
     it 'should check the availability of Classroom class method/s' do
